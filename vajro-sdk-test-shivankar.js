@@ -11444,6 +11444,7 @@ const dispatch = (action, data) => {
         const actionDidHandler = (appContext, res, error) => {
             let endTime = performance.now();
             let duration = Math.round(endTime - startTime);
+            console.log("duration", duration);
             if (error && Object.keys(error).length) {
                 if (!error.type) {
                     error.type = 'App Exception';
